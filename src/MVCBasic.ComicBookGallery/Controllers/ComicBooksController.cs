@@ -13,8 +13,8 @@ namespace MVCBasic.ComicBookGallery.Controllers
         {
             var comicBook = new ComicBook()
             {
-                Title = "ExampleTitle",
-                Issue = 2,
+                Title = "The Amazing Spider-Man ",
+                Issue = 700,
                 DescriptionHtml = "<p>Description</p>",
                 Artists = new List<Artist>()
                 {
