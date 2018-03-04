@@ -1,5 +1,13 @@
 ﻿@{
     Layout = null;
+    var title = "ExampleTitle";
+    var no = 2;
+    var artist = new string[]
+    {
+        "Name: Name",
+        "Age: 25",
+        "Gender: Female"
+    };
 }
 
 <!DOCTYPE html>
@@ -11,7 +19,19 @@
 </head>
 <body>
     <div>
-    <h1>Details</h1>
+        <h1>@title</h1>
+        <h2>Number #@no.ToString()</h2>
+        @if (artist.Length > 0)
+        {
+            <h2>Info:</h2>
+            <ul>
+                @foreach (var a in artist)
+                {
+                    <li>@a</li>
+                }
+            </ul>
+        }
+
     </div>
 </body>
 </html>
