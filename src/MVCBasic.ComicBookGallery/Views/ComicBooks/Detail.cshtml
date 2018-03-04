@@ -1,29 +1,17 @@
 ﻿@{
-    Layout = null;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title= "Example";
 }
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title></title>
-</head>
-<body>
-    <div>
-        <h1>@ViewBag.Title</h1>
-        <h2>Number #@ViewBag.No.ToString()</h2>
-        @if (ViewBag.Artist.Length > 0)
+<h1>@ViewBag.Title</h1>
+<h2>Number #@ViewBag.No.ToString()</h2>
+@if (ViewBag.Artist.Length > 0)
+{
+    <h2>Info:</h2>
+    <ul>
+        @foreach (var a in ViewBag.Artist)
         {
-            <h2>Info:</h2>
-            <ul>
-                @foreach (var a in ViewBag.Artist)
-                {
-                    <li>@a</li>
-                }
-            </ul>
+            <li>@a</li>
         }
-
-    </div>
-</body>
-</html>
+    </ul>
+}
