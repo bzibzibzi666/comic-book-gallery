@@ -9,14 +9,14 @@
         <div class="well">
             <h5><label>Series Title:</label> @Model.Title</h5>
             <h5><label>Issue #:</label> @Model.Issue</h5>
-            <h5><label>Favorite:</label> @(Model.Favorite == true ? "Yes" : "No")</h5>
+            <h5><label>Favorite:</label> @(Model.Favorite ? "Yes" : "No")</h5>
             <h5>Artists:</h5>
             <div>
                 <ul>
                     @foreach (var a in Model.Artists)
-                {
-                    <li>Name: @a.Name, Role: @a.Role</li>
-            }
+                    {
+                        <li>Name: @a.Name, Role: @a.Role</li>
+                    }
                 </ul>
             </div>
         </div>
