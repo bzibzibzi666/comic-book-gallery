@@ -10,6 +10,14 @@ namespace MVCBasic.ComicBookGallery.Controllers
     {
         public ActionResult Detail()
         {
+            ViewBag.Title = "ExampleTitle";
+            ViewBag.No = 2;
+            ViewBag.Artist = new string[]
+            {
+                "Name: Name",
+                "Age: 25",
+                "Gender: Female"
+            };
             return View();
         }
     }
