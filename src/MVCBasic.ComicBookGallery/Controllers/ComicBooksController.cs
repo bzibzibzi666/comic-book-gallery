@@ -16,5 +16,10 @@ namespace MVCBasic.ComicBookGallery.Controllers
                 return HttpNotFound();
             return View(ComicBookRepository.GetComicBook((int)id));
         }
+
+        public ActionResult Index()
+        {
+            return View(ComicBookRepository.GetComicBooks());
+        }
     }
 }
