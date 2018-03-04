@@ -8,5 +8,9 @@ namespace MVCBasic.ComicBookGallery.Controllers
 {
     public class CommicBooksController: Controller
     {
+        public string Detail()
+        {
+            return "details";
+        }
     }
 }
