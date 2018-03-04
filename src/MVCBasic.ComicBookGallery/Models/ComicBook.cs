@@ -12,6 +12,20 @@ namespace MVCBasic.ComicBookGallery.Models
         public int Issue { get; set; }
         public string DescriptionHtml { get; set; }
         public List<Artist> Artists { get; set; }
-        public bool Fivorite { get; set; }
+        public bool Favorite { get; set; }
+        public string DisplayText
+        {
+            get
+            {
+                return $"{Title} # {Issue}";
+            }
+        }
+        public string CoverImageFileName
+        {
+            get
+            {
+                return $"{Title}".Replace(" ", "-").ToLower() + Issue + ".jpg";
+            }
+        }
     }
 }
