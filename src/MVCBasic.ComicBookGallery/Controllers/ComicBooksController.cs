@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MVCBasic.ComicBookGallery.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,15 +11,19 @@ namespace MVCBasic.ComicBookGallery.Controllers
     {
         public ActionResult Detail()
         {
-            ViewBag.Title = "ExampleTitle";
-            ViewBag.No = 2;
-            ViewBag.Artist = new string[]
+            var comicBook = new ComicBook()
             {
-                "Name: Name",
-                "Age: 25",
-                "Gender: Female"
+                Title = "ExampleTitle",
+                Issue = 2,
+                DescriptionHtml = "<p>Description</p>",
+                Artists = new List<Artist>()
+                {
+                    new Artist(){Name="Name One", Role="Role One"},
+                    new Artist(){Name="Name Two", Role="Role Two"},
+                    new Artist(){Name="NameThree", Role="Role Three"}
+                }
             };
-            return View();
+            return View(comicBook);
         }
     }
 }
